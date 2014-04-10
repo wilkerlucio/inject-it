@@ -1,0 +1,22 @@
+{
+  "name": "simple-injector",
+  "version": "1.0.0",
+  "description": "A really simple Dependency Injector library",
+  "main": "./injector.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/injector_test.js"
+  },
+  "author": "Wilker Lucio <wilkerlucio@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wilkerlucio/simple-injector.git"
+  },
+  "files": [
+    "injector.js"
+  ],
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
+  }
+}
