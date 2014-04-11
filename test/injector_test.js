@@ -23,7 +23,7 @@ describe("Injector", function() {
         it("raises an error if the dependency is already set", function() {
             injector.set('dep', 'value');
 
-            expect(function () { injector.set('dep', 'somethingElse'); }).throw(/Dependency dep is already set/)
+            expect(function () { injector.set('dep', 'somethingElse'); }).throw(/Dependency dep is already set/);
         });
 
         it("can override dependency using override", function() {
@@ -34,7 +34,7 @@ describe("Injector", function() {
         });
 
         it("raises an error if you try to override an undefined dependency", function() {
-            expect(function() { injector.override('dep', 'somethingElse'); }).throw(/Dependency dep is not defined/)
+            expect(function() { injector.override('dep', 'somethingElse'); }).throw(/Dependency dep is not defined/);
         });
     });
 
@@ -57,7 +57,7 @@ describe("Injector", function() {
             it("injects the dependencies by it's names", function() {
                 injector.set('someDep', 'value');
 
-                var fn = function (someDep) { return someDep + ' hello'; }
+                var fn = function (someDep) { return someDep + ' hello'; };
 
                 expect(injector.call(fn)).eq('value hello');
             });
