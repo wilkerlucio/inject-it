@@ -27,7 +27,7 @@
 
     Injector.prototype.set = function (name, value) {
         if (typeof this.deps[name] !== 'undefined')
-            throw "Dependency " + name + " is already set";
+            throw new Error("Dependency " + name + " is already set");
 
         this.deps[name] = value;
     };
@@ -55,7 +55,7 @@
 
     Injector.prototype._guardDependencyRead = function (name) {
         if (typeof this.deps[name] === 'undefined')
-            throw "Dependency " + name + " is not defined";
+            throw new Error("Dependency " + name + " is not defined");
     };
 
     module.exports = Injector;
