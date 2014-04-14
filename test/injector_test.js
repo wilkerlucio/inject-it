@@ -51,6 +51,14 @@ describe("Injector", function() {
 
                 expect(Injector.readArguments(myFunction)).eql(['some', 'args']);
             });
+
+            it("in case of nested functions, always use only the first one", function () {
+                var myFunction = function() {
+                    return function(me) {}
+                };
+
+                expect(Injector.readArguments(myFunction)).eql([]);
+            })
         });
 
         describe("injecting functions", function() {

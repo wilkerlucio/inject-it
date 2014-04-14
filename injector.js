@@ -1,6 +1,6 @@
 (function () {
     var trim = function(word) { return word.replace(/^\s+|\s+$/g, ''); };
-    var FN_ARGS_REGEXP = /function\s?\w*\((.+?)\)/;
+    var FN_ARGS_REGEXP = /^function\s?\w*\((.+?)\)/;
 
     function Injector() {
         var _this = this;
