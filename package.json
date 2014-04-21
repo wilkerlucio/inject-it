@@ -1,5 +1,5 @@
 {
-  "name": "simple-injector",
+  "name": "inject-it",
   "version": "1.0.3",
   "description": "A really simple Dependency Injector library",
   "main": "./injector.js",
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/wilkerlucio/simple-injector.git"
+    "url": "git://github.com/wilkerlucio/inject-it.git"
   },
   "files": [
     "injector.js"

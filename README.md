@@ -1,16 +1,16 @@
-# Simple Injector
+# Inject It
 
-Simple injector provides a simple and easy way to handle your Node.js application level dependencies.
+`Inject it` provides a simple and easy way to handle your Node.js application level dependencies.
 
 ## Installation
 
 ```
-npm install -S simple-injector
+npm install -S inject-it
 ```
 
 ## Configuring the injector
 
-The simple injector porpuse is to work like a simple flat map of your application dependencies, so, imagine that it's
+The inject-it porpuse is to work like a simple flat map of your application dependencies, so, imagine that it's
 just a hash with extra convenience, where you define your dependencies by name. While the name of the dependencies are
 all strings, the values of dependencies can be whatever you want, instances, classes...
 
@@ -19,7 +19,7 @@ application, here is a sample one:
 
 `config/injector.js`
 ```javascript
-var Injector = require('simple-injector');
+var Injector = require('inject-it');
 
 var injector = new Injector();
 
