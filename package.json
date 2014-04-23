@@ -4,7 +4,7 @@
   "description": "A really simple Dependency Injector library",
   "main": "./injector.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test/injector_test.js"
+    "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script/register --recursive test"
   },
   "author": "Wilker Lucio <wilkerlucio@gmail.com>",
   "license": "MIT",
@@ -17,6 +17,10 @@
   ],
   "devDependencies": {
     "mocha": "~1.18.2",
-    "chai": "~1.9.1"
+    "chai": "~1.9.1",
+    "sinon": "~1.9.1"
+  },
+  "dependencies": {
+    "coffee-script": "~1.7.1"
   }
 }
