@@ -23,16 +23,13 @@ var Injector = require('inject-it');
 
 var injector = new Injector();
 
-injector.set('injector', injector); // I found that having the injector itself as a dependency is very helpful
+injector.value('injector', injector); // I found that having the injector itself as a dependency is very helpful
 
-injector.set('User', require('../app/models/user'));
-injector.set('SomeLib', require('../lib/some_lib'));
+injector.value('User', require('../app/models/user'));
+injector.value('SomeLib', require('../lib/some_lib'));
 
 module.exports = injector;
 ```
-
-Note that if you try to `set` a dependency that is already set, you will get an error, that way we prevent your from
-overriding dependencies by accident. If you really want to override a a dependency, use the `override` method.
 
 ## Using the injector
 
