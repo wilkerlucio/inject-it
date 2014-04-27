@@ -64,3 +64,16 @@ describe "Injector", ->
     injector.service('myserv', Service)
 
     expect(injector.get('myserv').hello()).eql 'Hello user'
+
+  it "can merge injectors", ->
+    injector.value('one', 'a')
+    injector.value('two', 'b')
+
+    injector2 = Injector()
+    injector2.value('one', 'z')
+    injector2.value('three', 'y')
+    injector2.loadFrom(injector)
+
+    expect(injector2.get('one')).eq('a')
+    expect(injector2.get('two')).eq('b')
+    expect(injector2.get('three')).eq('y')

@@ -30,6 +30,11 @@ class Injector
 
   service: (name, service) => @deps[name] = lazyInitialize(service, @construct); this
 
+  loadFrom: (injector) =>
+    @deps[key] = value for key, value of injector.deps
+
+    this
+
   get: (name) =>
     unless @deps.hasOwnProperty(name)
       throw new Error("Dependency '#{name}' is not defined")
