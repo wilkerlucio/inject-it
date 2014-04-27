@@ -19,9 +19,7 @@ application, here is a sample one:
 
 `config/injector.js`
 ```javascript
-var Injector = require('inject-it');
-
-var injector = new Injector();
+var injector = require('inject-it')()
 
 injector.value('injector', injector); // I found that having the injector itself as a dependency is very helpful
 

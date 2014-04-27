@@ -12,7 +12,7 @@ describe "Injector", ->
   injector = null
 
   beforeEach ->
-    injector = new Injector()
+    injector = Injector()
 
   it "raises an error when trying to get an undefined dependency", ->
     expect(-> injector.get('dep')).throw("Dependency 'dep' is not defined")

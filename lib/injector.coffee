@@ -20,7 +20,7 @@ lazyInitialize = (provider, initializer) ->
 
     cacheContainer.value
 
-module.exports = class Injector
+class Injector
   constructor: ->
     @deps = {}
 
@@ -47,3 +47,5 @@ module.exports = class Injector
     new tmp(deps);
 
   readArguments: (fn) => @get(arg) for arg in readArguments(fn)
+
+module.exports = (args...) -> new Injector(args...)
