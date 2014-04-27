@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "A really simple Dependency Injector library",
   "main": "./injector.js",
+  "browser": "./lib/injector.coffee",
   "scripts": {
     "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script/register --recursive test"
   },
